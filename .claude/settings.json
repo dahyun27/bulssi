@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // empty' | grep -qE '^lib/' && (cd /Users/dahyun/Documents/App/bulssi && flutter analyze && flutter test) 2>/dev/null || true",
+            "statusMessage": "flutter analyze & test 실행 중..."
+          }
+        ]
+      }
+    ]
+  }
+}
