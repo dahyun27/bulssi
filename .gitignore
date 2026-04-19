@@ -53,3 +53,4 @@ ios/Runner/GoogleService-Info.plist
 android/app/google-services.json
 lib/config/secrets.dart
 lib/config/api_keys.dart
+lib/firebase_options.dart
